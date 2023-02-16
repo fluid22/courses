@@ -1,0 +1,23 @@
+{
+    "name": "fluid22/courses",
+    "description": "A framework for building courses using WooCommerce and Elementor",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Fluid22\\Courses\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Preston Lloyd",
+            "email": "preston@fluid22.com"
+        }
+    ],
+    "require": {
+        "fluid22/modules": "dev-master"
+    }
+}
