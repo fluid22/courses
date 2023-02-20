@@ -24,12 +24,12 @@ function get_courses_user_meta_key() {
  * Get the list of course ids that the user has purchased
  *
  * @param $user_id
- * @return false|int[]
+ * @return int[]
  */
 function get_user_courses( $user_id = 0 ) {
     if ( 0 === $user_id ) {
         if ( is_user_logged_in() ) {
-            $user_id === get_current_user_id();
+            $user_id = get_current_user_id();
         } else {
             return array();
         }
