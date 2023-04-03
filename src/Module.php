@@ -158,6 +158,11 @@ class Module extends \Fluid22\Module\Module
      * @return \WC_Product
      */
     public function get_product_from_line_item( $product, $line_item, $order ) {
+        // safety check
+        if ( ! is_a( $product, \WC_Product::class ) ) {
+            return $product;
+        }
+
         if ( false !== ( $course_id = $line_item->get_meta( '_course_id' ) ) ) {
             $product = new CourseProduct( $product->get_id() );
 
